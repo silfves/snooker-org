@@ -1,7 +1,13 @@
+
+# Importing Libraries -----------------------------------------------------
+
 library(httr)
 library(jsonlite)
 
-# Define the full API URL with https://
+
+# Importing Data -------------------------------------------------------------
+
+# Define the full API URL
 url <- "https://api.snooker.org/?rt=MoneyRankings&s=2015"
 
 # Define the required header
@@ -20,6 +26,10 @@ if (status_code(response) != 200) {
 json_data <- content(response, as = "text", encoding = "UTF-8")
 parsed_data <- fromJSON(json_data)
 
-# Convert to data.frame (if applicable)
-df <- as.data.frame(parsed_data)
-head(df)
+# Convert to data.frame
+df_rankings <- as.data.frame(parsed_data)
+
+
+# Transforming Data -------------------------------------------------------
+
+head(df_rankings)

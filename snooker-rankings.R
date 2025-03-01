@@ -1,3 +1,4 @@
+# Data received from snooker.org
 
 # Importing Libraries -----------------------------------------------------
 
@@ -33,3 +34,13 @@ df_rankings <- as.data.frame(parsed_data)
 # Transforming Data -------------------------------------------------------
 
 head(df_rankings)
+
+
+# Future Additions --------------------------------------------------------
+
+# Looping through years w/ API request limit handling
+# Adding old Ranking data (transformations?)
+# Clean up data
+# Save data somewhere
+# Collect player data and save em
+
